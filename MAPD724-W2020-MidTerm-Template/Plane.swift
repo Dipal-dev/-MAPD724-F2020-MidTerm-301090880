@@ -1,3 +1,10 @@
+//
+//  Game Name: Mail Pilot
+//  Source File Name : Plane.Swift
+//  Author’s Name : Dipal Patel
+//  Student Number : 301090880
+//  Test Date : 19 feb 2020
+//
 import SpriteKit
 
 class Plane: GameObject
@@ -16,15 +23,15 @@ class Plane: GameObject
     override func CheckBounds()
     {
         // right boundary
-        if(self.position.x >= 307 - self.halfWidth!)
+        if(self.position.y >= 307 - self.halfWidth!)
         {
-            self.position.x = 307 - self.halfWidth!
+            self.position.y = 307 - self.halfWidth!
         }
         
         // left boundary
-        if(self.position.x <= -307 + self.halfWidth!)
+        if(self.position.y <= -307 + self.halfWidth!)
         {
-            self.position.x = -307 + self.halfWidth!
+            self.position.y = -307 + self.halfWidth!
         }
     }
     

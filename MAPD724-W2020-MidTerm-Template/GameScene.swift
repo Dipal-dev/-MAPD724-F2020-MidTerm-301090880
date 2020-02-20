@@ -1,4 +1,10 @@
-
+//
+//  Game Name: Mail Pilot
+//  Source File Name : GameScene.Swift
+//  Author’s Name : Dipal Patel
+//  Student Number : 301090880
+//  Test Date : 19 feb 2020
+//
 import UIKit
 import AVFoundation
 import SpriteKit
@@ -42,7 +48,7 @@ class GameScene: SKScene {
         
         // add plane
         self.planeSprite = Plane()
-        self.planeSprite?.position = CGPoint(x: 0, y: -575)
+        self.planeSprite?.position = CGPoint(x: -585, y: 0)
         self.addChild(planeSprite!)
         
         // add island
@@ -78,17 +84,17 @@ class GameScene: SKScene {
     
     func touchDown(atPoint pos : CGPoint)
     {
-        self.planeSprite?.TouchMove(newPos: CGPoint(x: pos.x, y: -575))
+        self.planeSprite?.TouchMove(newPos: CGPoint(x: -585, y: pos.y))
     }
     
     func touchMoved(toPoint pos : CGPoint)
     {
-        self.planeSprite?.TouchMove(newPos: CGPoint(x: pos.x, y: -575))
+        self.planeSprite?.TouchMove(newPos: CGPoint(x: -585, y: pos.y))
     }
     
     func touchUp(atPoint pos : CGPoint)
     {
-        self.planeSprite?.TouchMove(newPos: CGPoint(x: pos.x, y: -575))
+        self.planeSprite?.TouchMove(newPos: CGPoint(x: -585, y: pos.y))
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)

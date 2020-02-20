@@ -1,3 +1,10 @@
+//
+//  Game Name: Mail Pilot
+//  Source File Name : Island.Swift
+//  Author’s Name : Dipal Patel
+//  Student Number : 301090880
+//  Test Date : 19 feb 2020
+//
 import SpriteKit
 import GameplayKit
 
@@ -21,7 +28,7 @@ class Island: GameObject
     override func CheckBounds()
     {
         // bottom boundary
-        if(self.position.x <= -515) // note maybe reset earlier
+        if(self.position.x <= -720) // note maybe reset earlier
         {
             self.Reset()
         }
@@ -46,8 +53,8 @@ class Island: GameObject
     
     override func Reset()
     {
-        self.position.y = CGFloat(arc4random_uniform(UInt32(200))) - 100
-        self.position.x = CGFloat(arc4random_uniform(UInt32(470))) + 470
+        self.position.y = CGFloat(arc4random_uniform(UInt32(680))) - 340
+        self.position.x = 726//CGFloat(arc4random_uniform(UInt32(470))) + 470
         
         self.isColliding = false
        /* self.position.y = 715

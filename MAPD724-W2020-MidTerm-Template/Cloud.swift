@@ -1,3 +1,10 @@
+//
+//  Game Name: Mail Pilot
+//  Source File Name : Cloud.Swift
+//  Author’s Name : Dipal Patel
+//  Student Number : 301090880
+//  Test Date : 19 feb 2020
+//
 import SpriteKit
 import GameplayKit
 
@@ -21,7 +28,7 @@ class Cloud: GameObject
     override func CheckBounds()
     {
         // bottom boundary
-        if(self.position.x <= -495) // note maybe reset earlier
+        if(self.position.x <= -760) // note maybe reset earlier
         {
             self.Reset()
         }
@@ -36,7 +43,7 @@ class Cloud: GameObject
     
     override func Reset()
     {
-        self.position.y = CGFloat(arc4random_uniform(UInt32(200))) - 100
+        self.position.y = CGFloat(arc4random_uniform(UInt32(680))) - 340
         self.position.x = CGFloat(arc4random_uniform(UInt32(470))) + 470
         self.dx = CGFloat((randomSource?.nextUniform())! * 5.0) + 5.0
         self.dy = CGFloat((randomSource?.nextUniform())! * -4.0) + 2.0
