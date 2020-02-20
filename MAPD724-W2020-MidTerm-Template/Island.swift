@@ -21,12 +21,12 @@ class Island: GameObject
     override func CheckBounds()
     {
         // bottom boundary
-        if(self.position.y < -715)
+        if(self.position.x <= -515) // note maybe reset earlier
         {
             self.Reset()
         }
         
-        // right boundary
+       /* // right boundary
         if(self.position.x >= 307 - self.halfWidth!)
         {
             self.position.x = 307 - self.halfWidth!
@@ -36,27 +36,31 @@ class Island: GameObject
         if(self.position.x <= -307 + self.halfWidth!)
         {
             self.position.x = -307 + self.halfWidth!
-        }
+        }*/
     }
     
     func Move()
     {
-        self.position.y -= self.dy!
+        self.position.x -= self.dx!
     }
     
     override func Reset()
     {
-        self.position.y = 715
+        self.position.y = CGFloat(arc4random_uniform(UInt32(200))) - 100
+        self.position.x = CGFloat(arc4random_uniform(UInt32(470))) + 470
+        
+        self.isColliding = false
+       /* self.position.y = 715
         let randomX:Int = (randomSource?.nextInt(upperBound: 614))! - 307
         self.position.x = CGFloat(randomX)
-        self.isColliding = false
+        self.isColliding = false*/
     }
     
     override func Start()
     {
         self.zPosition = 1
         self.Reset()
-        self.dy = 5.0
+        self.dx = 5.0
     }
     
     override func Update()
