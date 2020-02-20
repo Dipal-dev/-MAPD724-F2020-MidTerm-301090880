@@ -53,7 +53,7 @@ class Island: GameObject
     
     override func Reset()
     {
-        self.position.y = CGFloat(arc4random_uniform(UInt32(680))) - 340
+        self.position.y = CGFloat(arc4random_uniform(UInt32(660))) - 330
         self.position.x = 726//CGFloat(arc4random_uniform(UInt32(470))) + 470
         
         self.isColliding = false

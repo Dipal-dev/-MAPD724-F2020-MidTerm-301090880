@@ -1,3 +1,10 @@
+//
+//  Game Name: Mail Pilot
+//  Source File Name : GameObject.Swift
+//  Author’s Name : Dipal Patel
+//  Student Number : 301090880
+//  Test Date : 19 feb 2020
+//
 import SpriteKit
 import GameplayKit
 

@@ -32,7 +32,17 @@ class Cloud: GameObject
         {
             self.Reset()
         }
+        // right boundary
+        if(self.position.y >= 320 - self.halfWidth!)
+        {
+            self.position.y = 320 - self.halfWidth!
+        }
         
+        // left boundary
+        if(self.position.y <= -320 + self.halfWidth!)
+        {
+            self.position.y = -320 + self.halfWidth!
+        }
     }
     
     func Move()
@@ -45,7 +55,7 @@ class Cloud: GameObject
     {
         self.position.y = CGFloat(arc4random_uniform(UInt32(680))) - 340
         self.position.x = CGFloat(arc4random_uniform(UInt32(470))) + 470
-        self.dx = CGFloat((randomSource?.nextUniform())! * 5.0) + 5.0
+        self.dx = CGFloat((randomSource?.nextUniform())! * 5.0) + 7.0
         self.dy = CGFloat((randomSource?.nextUniform())! * -4.0) + 2.0
         self.isColliding = false
     }

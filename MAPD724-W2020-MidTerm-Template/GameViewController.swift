@@ -1,9 +1,9 @@
 //
-//  GameViewController.swift
-//  MAPD724-W2020-Lesson2
-//
-//  Created by Tom Tsiliopoulos on 2020-01-15.
-//  Copyright © 2020 CentennialCollege. All rights reserved.
+//  Game Name: Mail Pilot
+//  Source File Name : GameViewController.Swift
+//  Author’s Name : Dipal Patel
+//  Student Number : 301090880
+//  Test Date : 19 feb 2020
 //
 
 import UIKit
